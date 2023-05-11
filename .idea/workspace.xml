@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7754e3d7-3f84-4021-9ffb-92024c3e08af" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NEUattJxKyu44tsNTrz7YUFvWY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/untitled&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Facultate anul 3\Sem_2\PS\PS_Tema3\src\main\resources\Resource Bundle 'Bundle'" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Model.Persistence" />
+      <recent name="Model.Entities" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="gfsdfgdsgfdfv" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PieChartView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zetcode.PieChartView" />
+      <module name="gfsdfgdsgfdfv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstractPersistenceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gfsdfgdsgfdfv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Persistence" />
+      <option name="MAIN_CLASS_NAME" value="Model.Persistence.AbstractPersistenceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstractPersistenceTest.deleteRequestLogIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gfsdfgdsgfdfv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Persistence" />
+      <option name="MAIN_CLASS_NAME" value="Model.Persistence.AbstractPersistenceTest" />
+      <option name="METHOD_NAME" value="deleteRequestLogIn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstractPersistenceTest.readAllRequestLogIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gfsdfgdsgfdfv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Persistence" />
+      <option name="MAIN_CLASS_NAME" value="Model.Persistence.AbstractPersistenceTest" />
+      <option name="METHOD_NAME" value="readAllRequestLogIn" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PieChartView" />
+        <item itemvalue="JUnit.AbstractPersistenceTest" />
+        <item itemvalue="JUnit.AbstractPersistenceTest.readAllRequestLogIn" />
+        <item itemvalue="JUnit.AbstractPersistenceTest.deleteRequestLogIn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7754e3d7-3f84-4021-9ffb-92024c3e08af" name="Changes" comment="" />
+      <created>1679228802710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679228802710</updated>
+      <workItem from="1679228803911" duration="3407000" />
+      <workItem from="1679232321432" duration="9587000" />
+      <workItem from="1679306372569" duration="17214000" />
+      <workItem from="1679340659946" duration="1672000" />
+      <workItem from="1679342366890" duration="34000" />
+      <workItem from="1679342606473" duration="602000" />
+      <workItem from="1679396898193" duration="75000" />
+      <workItem from="1679563972904" duration="6441000" />
+      <workItem from="1679602202526" duration="33000" />
+      <workItem from="1679666980764" duration="6345000" />
+      <workItem from="1679766965120" duration="8510000" />
+      <workItem from="1679832448431" duration="17262000" />
+      <workItem from="1679928862485" duration="5715000" />
+      <workItem from="1679940663437" duration="2017000" />
+      <workItem from="1680167304081" duration="805000" />
+      <workItem from="1680189957871" duration="13000" />
+      <workItem from="1680191490152" duration="847000" />
+      <workItem from="1680193392562" duration="634000" />
+      <workItem from="1680202305940" duration="4000" />
+      <workItem from="1680204526298" duration="1176000" />
+      <workItem from="1680770739344" duration="619000" />
+      <workItem from="1681114657361" duration="32000" />
+      <workItem from="1681155769466" duration="933000" />
+      <workItem from="1681374164394" duration="4773000" />
+      <workItem from="1681415305066" duration="4857000" />
+      <workItem from="1681484615346" duration="2061000" />
+      <workItem from="1681569511982" duration="1075000" />
+      <workItem from="1681678090830" duration="1730000" />
+      <workItem from="1681813813074" duration="1212000" />
+      <workItem from="1681816035508" duration="475000" />
+      <workItem from="1681826117628" duration="4780000" />
+      <workItem from="1681832953396" duration="1314000" />
+      <workItem from="1681848663338" duration="586000" />
+      <workItem from="1681910130542" duration="19364000" />
+      <workItem from="1681974704605" duration="494000" />
+      <workItem from="1681977670569" duration="1390000" />
+      <workItem from="1681981696570" duration="37000" />
+      <workItem from="1681981788986" duration="1466000" />
+      <workItem from="1682666725890" duration="5000" />
+      <workItem from="1683114383309" duration="14018000" />
+      <workItem from="1683187221700" duration="2001000" />
+      <workItem from="1683486593587" duration="966000" />
+      <workItem from="1683541007492" duration="4962000" />
+      <workItem from="1683549407051" duration="7232000" />
+      <workItem from="1683791768851" duration="1229000" />
+      <workItem from="1683793147455" duration="926000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
