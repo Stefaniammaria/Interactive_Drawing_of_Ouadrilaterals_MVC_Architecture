@@ -21,6 +21,8 @@ public class AdminView extends JFrame{
     private JLabel emailLabel;
     private JLabel tipLabel;
     private JComboBox comboBox1;
+    private JComboBox filterListComboBox;
+    private JButton showFilteredListButton;
 
     public AdminView() {
         setContentPane(panel);
@@ -95,5 +97,13 @@ public class AdminView extends JFrame{
 
     public JLabel getTipLabel() {
         return tipLabel;
+    }
+
+    public JComboBox getFilterListComboBox() {
+        return filterListComboBox;
+    }
+
+    public JButton getShowFilteredListButton() {
+        return showFilteredListButton;
     }
 }

@@ -23,6 +23,7 @@ public class RequestLogInController extends Observer{
         requestLogInView.getNumeLabel().setText(resourceBundle.getString("nume"));
         requestLogInView.getPrenumeLabel().setText(resourceBundle.getString("prenume"));
         requestLogInView.getEmailLabel().setText(resourceBundle.getString("email"));
+        requestLogInView.getTipLabel().setText(resourceBundle.getString("tip"));
     }
 
     public RequestLogInController() {
@@ -87,6 +88,7 @@ public class RequestLogInController extends Observer{
         requestLogIn.setNume(requestLogInView.getTextNume().getText());
         requestLogIn.setPrenume(requestLogInView.getTextPrenume().getText());
         requestLogIn.setEmail(requestLogInView.getTextEmail().getText());
+        requestLogIn.setTip(requestLogInView.getTipField().getText());
         abstractPersistence.insert(requestLogIn);
 
     }

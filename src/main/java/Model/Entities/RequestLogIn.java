@@ -30,4 +30,7 @@ public class RequestLogIn implements Serializable {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "tip")
+    private String tip;
+
 }

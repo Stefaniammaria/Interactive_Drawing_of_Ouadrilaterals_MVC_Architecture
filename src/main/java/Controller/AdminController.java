@@ -13,14 +13,14 @@ import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class AdminController extends Observer{
+public class AdminController extends Observer {
 
     private AdminView adminView;
 
     @Override
     public void language() {
-        Locale l = new Locale(Language.lang,Language.country);
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("Bundle",l);
+        Locale l = new Locale(Language.lang, Language.country);
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("Bundle", l);
         adminView.getCreateAccountButton().setText(resourceBundle.getString("createAccount"));
         adminView.getShowListButton().setText(resourceBundle.getString("showlist"));
         adminView.getBackButton().setText(resourceBundle.getString("back"));
@@ -30,6 +30,11 @@ public class AdminController extends Observer{
         adminView.getEmailLabel().setText(resourceBundle.getString("email"));
         adminView.getTipLabel().setText(resourceBundle.getString("tip"));
         adminView.getParolaLabel().setText(resourceBundle.getString("parola"));
+        adminView.getFilterListComboBox().removeAllItems();
+        adminView.getFilterListComboBox().addItem(resourceBundle.getString("admin"));
+        adminView.getFilterListComboBox().addItem(resourceBundle.getString("elev"));
+        adminView.getShowFilteredListButton().setText(resourceBundle.getString("filtered"));
+
     }
 
     public AdminController() {
@@ -54,26 +59,37 @@ public class AdminController extends Observer{
         adminView.getComboBox1().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String s=(String)adminView.getComboBox1().getSelectedItem();
-                if(s.equals("English")){
-                    Language.lang="en";
-                    Language.country="UK";
+                String s = (String) adminView.getComboBox1().getSelectedItem();
+                if (s.equals("English")) {
+                    Language.lang = "en";
+                    Language.country = "UK";
                     Language.update();
 
                 }
-                if(s.equals("Romana")){
-                    Language.lang="ro";
-                    Language.country="RO";
+                if (s.equals("Romana")) {
+                    Language.lang = "ro";
+                    Language.country = "RO";
                     Language.update();
 
                 }
 
-                if(s.equals("Deutsch")){
-                    Language.lang="ge";
-                    Language.country="GE";
+                if (s.equals("Deutsch")) {
+                    Language.lang = "ge";
+                    Language.country = "GE";
                     Language.update();
 
                 }
+            }
+        });
+
+        adminView.getShowFilteredListButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = (String) adminView.getFilterListComboBox().getSelectedItem();
+                if(s.equals("Studentin") || s.equals("Student") || s.equals("Elev"))
+                    showFilteredList("elev");
+                if(s.equals("Administratorin") || s.equals("Administrator"))
+                    showFilteredList("admin");
             }
         });
 
@@ -92,21 +108,22 @@ public class AdminController extends Observer{
         });
     }
 
-    public void showList(){
+    public void showList() {
 
         AbstractPersistence<RequestLogIn> abstractPersistence = new AbstractPersistence<>(RequestLogIn.class);
         List<RequestLogIn> logIns = abstractPersistence.readAll();
 
-        String[] columnNames = {"Nume", "Prenume", "Email"};
+        String[] columnNames = {"Nume", "Prenume", "Email", "Tip"};
         int rowIndex = 0;
         int numberRows = logIns.size();
-        Object [][] data = new String[numberRows][3];
+        Object[][] data = new String[numberRows][4];
 
         for (RequestLogIn r : logIns) {
 
             data[rowIndex][0] = r.getNume();
             data[rowIndex][1] = r.getPrenume();
             data[rowIndex][2] = r.getEmail();
+            data[rowIndex][3] = r.getTip();
 
             rowIndex++;
 
@@ -116,7 +133,7 @@ public class AdminController extends Observer{
         adminView.getUsersRequestsTable().setModel(defaultTableModel);
     }
 
-    public void createAccount(){
+    public void createAccount() {
 
         AbstractPersistence<User> abstractPersistence = new AbstractPersistence<>(User.class);
         AbstractPersistence<RequestLogIn> abstractPersistence2 = new AbstractPersistence<>(RequestLogIn.class);
@@ -142,16 +159,17 @@ public class AdminController extends Observer{
 
         List<RequestLogIn> logInsUpdated = abstractPersistence2.readAll();
 
-        String[] columnNames = {"Nume", "Prenume", "Email"};
+        String[] columnNames = {"Nume", "Prenume", "Email", "Tip"};
         int rowIndex = 0;
         int numberRows = logInsUpdated.size();
-        Object [][] data = new String[numberRows][3];
+        Object[][] data = new String[numberRows][4];
 
-        for (RequestLogIn r : logInsUpdated) {
+        for (RequestLogIn r : logIns) {
 
             data[rowIndex][0] = r.getNume();
             data[rowIndex][1] = r.getPrenume();
             data[rowIndex][2] = r.getEmail();
+            data[rowIndex][3] = r.getTip();
 
             rowIndex++;
 
@@ -160,6 +178,38 @@ public class AdminController extends Observer{
         DefaultTableModel defaultTableModel = new DefaultTableModel(data, columnNames);
         adminView.getUsersRequestsTable().setModel(defaultTableModel);
 
+    }
+
+    public void showFilteredList(String filter) {
+
+        AbstractPersistence<RequestLogIn> abstractPersistence = new AbstractPersistence<>(RequestLogIn.class);
+        List<RequestLogIn> logIns = abstractPersistence.readAll();
+
+        String[] columnNames = {"Nume", "Prenume", "Email", "Tip"};
+        int rowIndex = 0;
+        int numberRows = 0;
+        for (RequestLogIn r : logIns) {
+
+            if (r.getTip().equals(filter)) numberRows++;
+
+        }
+
+        Object[][] data = new String[numberRows][4];
+
+        for (RequestLogIn r : logIns) {
+
+            if (r.getTip().equals(filter)) {
+                data[rowIndex][0] = r.getNume();
+                data[rowIndex][1] = r.getPrenume();
+                data[rowIndex][2] = r.getEmail();
+                data[rowIndex][3] = r.getTip();
+
+                rowIndex++;
+            }
+        }
+
+        DefaultTableModel defaultTableModel = new DefaultTableModel(data, columnNames);
+        adminView.getUsersRequestsTable().setModel(defaultTableModel);
     }
 
 }

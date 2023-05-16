@@ -13,6 +13,8 @@ public class RequestLogInView extends JFrame{
     private JLabel numeLabel;
     private JLabel prenumeLabel;
     private JLabel emailLabel;
+    private JLabel tipLabel;
+    private JTextField tipField;
 
     public RequestLogInView() {
 
@@ -59,4 +61,13 @@ public class RequestLogInView extends JFrame{
     public JButton getBackButton() {
         return backButton;
     }
+
+    public JLabel getTipLabel() {
+        return tipLabel;
+    }
+
+    public JTextField getTipField() {
+        return tipField;
+    }
+
 }
